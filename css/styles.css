@@ -67,18 +67,22 @@ img {
   display: flex;
   align-items: center;
   gap: 40px;
+  
 }
 .header {
    border-bottom: 1px solid #e7e9fc;
-  padding-top: 24px;
-  padding-bottom: 24px;
+   background: #fff;
+   box-shadow: зі значенням 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  
   /* height: 72px; */
 }
-.header-box {
+.header .header-box {
   /* max-width: 1158px; */
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 24px;
+  padding-bottom: 24px;
 
 
 }
@@ -134,6 +138,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
    padding: 24px 0 ;
+   transition: transform 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .link-navigation:focus,
 .link-navigation:hover {
@@ -143,23 +148,31 @@ img {
 .header-address {
   font-style: normal;
 }
-.current-page {
+.current {
   position: relative;
-  transition: transform 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  color: #404BBF;
+  
 }
-.current-page::after {
-  display: block;
+.current::after {
   background-color: #404bbf;
   content: '';
   width: 100%;
   height: 4px;
+  bottom: -1px;
   position: absolute;
-  transform: translateY(21px);
   border-radius: 2px;
 }
-.current-page:hover,
-.current-page:focus {
+.current:hover,
+.current:focus {
   color: var(--OCEAN, #404BBF);
+  
+}
+.link-navigation-address {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+   transition: transform 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+
 }
 /* ===========/ HEDER ================ */
 
